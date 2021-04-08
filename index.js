@@ -101,7 +101,7 @@ app.delete('/artists/:id', (req, res) => {
     res.redirect('/artists');
 })
 
-
-app.listen(3001, () => {
-    console.log("ON PORT 3001!")
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`SERVING ON PORT ${port}!`)
 })
