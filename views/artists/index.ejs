@@ -4,12 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Images Index</title>
+    <style>
+        .artist {
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
 </head>
 <body>
     <h1>Artists</h1>
     <ul>
         <% for (let artist of artists) {%>
-            <li style="display: inline-flex; flex-direction: column;">
+            <li class="artist">
                 <h3><%=artist.name%></h3>
                 <img src= <%= artist.url %>>
                 <a href="/artists/<%= artist.id %>">+ details</a>

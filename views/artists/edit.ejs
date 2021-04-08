@@ -12,11 +12,18 @@
     <h1>Edit</h1>
     <form method="POST" action="/artists/<%=artist.id%>?_method=PATCH">
         <section>
-            <label for="name">Enter artist's name:</label>
-            <input type="text" id="name" name="name" placeholder=<%=artist.name%>>           
+            <label for="name">Enter the artist's name:</label>
+            <br>
+            <input type="text" id="name" name="name" value=<%=artist.name%>>           
+        </section>
+        <section>
+            <label for="bio">Modify the artist's bio:</label>
+            <br>
+            <textarea name="bio" id="bio" cols="30" rows="10"><%= artist.bio %></textarea>
         </section>
         <button>Save</button>
     </form>
+    <a href="/artists/<%= artist.id %>">Back to Artist</a>
 
 </body>
 
