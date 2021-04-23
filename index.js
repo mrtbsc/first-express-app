@@ -100,8 +100,7 @@ app.patch('/artists/:id', (req, res) => {
 // ***************************************************
 app.delete('/artists/:id', (req, res) => {
     const { id } = req.params;
-    const artist = artists.find(a => a.id === id);
-    artists.pop(artist);
+    artists = artists.filter( a => a.id !== id);
     res.redirect('/artists');
 })
 
